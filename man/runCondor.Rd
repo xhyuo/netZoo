@@ -40,7 +40,7 @@ control_net <- control_all_panda_result$panda
 
 # Run CONDOR
 treated_condor_object <- runCondor(treated_net, threshold = 0)
-control_net_condor_object <- runCondor(control_net, threshold = 0)
+control_condor_object <- runCondor(control_net, threshold = 0)
 
 # plot communities
 # package igraph and package viridisLite are already loaded with this package.
