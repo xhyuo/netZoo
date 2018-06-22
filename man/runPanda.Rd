@@ -7,7 +7,7 @@
 runPanda(e = expression, m = motif, ppi = ppi, f = remove_missing)
 }
 \arguments{
-\item{e}{Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \strong\emph{required}}
+\item{e}{Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \emph{required}}
 
 \item{m}{Character String indicatining the file path of pair file of motif edges,
 when not provided analysis continues with Pearson correlation matrix. \emph{optional}}

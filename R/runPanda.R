@@ -7,7 +7,7 @@
 #' \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0064832}{[(Glass et al. 2013)])}
 #' This function is able to run \href{https://github.com/davidvi/pypanda}{pypanda} -- Python implementation of PANDA in R enviroment.
 #'
-#' @param e Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \strong\emph{required}
+#' @param e Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \emph{required}
 #' @param m Character String indicatining the file path of pair file of motif edges,
 #'          when not provided analysis continues with Pearson correlation matrix. \emph{optional}
 #' @param ppi Character String indicatining the pair file path of Protein-Protein interaction dataset. \emph{optional}
@@ -81,6 +81,8 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, f = remove_missing){
   # invoke py code to create a pypanda object
   #str <- paste("p=Panda(", "\'", e, "\'", ",", "\'", m, "\'", ",", "\'", ppi, "\'", ",", f, ")", sep = '')
   str <-  paste("p=Panda(", str1, ",", str2,",", str3, ",", str4, ")", sep ='')
+  print(str)
+  
   # call py
   py_run_string(str)
   py_run_string(paste("a=p.export_panda_results"))
