@@ -81,8 +81,6 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, f = remove_missing){
   # invoke py code to create a pypanda object
   #str <- paste("p=Panda(", "\'", e, "\'", ",", "\'", m, "\'", ",", "\'", ppi, "\'", ",", f, ")", sep = '')
   str <-  paste("p=Panda(", str1, ",", str2,",", str3, ",", str4, ")", sep ='')
-  print(str)
-  
   # call py
   py_run_string(str)
   py_run_string(paste("a=p.export_panda_results"))
