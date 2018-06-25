@@ -27,7 +27,6 @@
 #' 
 #' # Calculate the default threshold of edge-weight in a PANDA network.
 #' calculateCutoff (treated_net )
-#' calculateCutoff (control_ne )
 #' 
 #' @export
 
