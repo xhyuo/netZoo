@@ -77,3 +77,10 @@ control_color_num <- max(control_condor_object$red.memb$com)
 control_color <- viridis(control_color_num, alpha = 1, begin = 0, end = 1, direction = 1, option = "D")
 condor.plot.communities(control_condor_object, color_list=control_color , point.size=0.04, xlab="Target", ylab="Regulator")
 ```
+## Further information
+
+Use `vignette("condor")` to access the vignette page of `condor` package.
+
+### Note
+If there is an error like `Error in fetch(key) : lazy-load database.rdb' is corrupt` when accessing the help pages of functions in this package after being loaded. It's [a limitation of base R](https://github.com/r-lib/devtools/issues/1660) and has not been solved yet. Restart R session and re-load this package will help.
+
