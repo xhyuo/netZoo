@@ -11,7 +11,7 @@
 #' @param m Character String indicatining the file path of pair file of motif edges,
 #'          when not provided analysis continues with Pearson correlation matrix. \emph{optional}
 #' @param ppi Character String indicatining the pair file path of Protein-Protein interaction dataset. \emph{optional}
-#' @param f Boolean indicatining whether to remove missing values. If TRUE, removes missing values.
+#' @param rm_missing Boolean indicatining whether to remove missing values. If TRUE, removes missing values.
 #'         if FALSE, keep missing values. THe default value is FALSE. \emph{optional}
 #'
 #' @return List of three items：
@@ -36,8 +36,8 @@
 #' 
 #' 
 #' # Run PANDA for treated and control network
-#' treated_all_panda_result <- runPanda(e = treated_expression_file_path, m = motif_file_path, ppi = ppi_file_path, f = TRUE )
-#' control_all_panda_result <- runPanda(e = control_expression_file_path, m = motif_file_path, ppi = ppi_file_path, f = TRUE )
+#' treated_all_panda_result <- runPanda(e = treated_expression_file_path, m = motif_file_path, ppi = ppi_file_path, rm_missing = TRUE )
+#' control_all_panda_result <- runPanda(e = control_expression_file_path, m = motif_file_path, ppi = ppi_file_path, rm_missing = TRUE )
 #' 
 #' # access PANDA regulatory network
 #' treated_net <- treated_all_panda_result$panda
@@ -54,7 +54,7 @@
 #'
 
 
-runPanda <- function( e = expression, m = motif, ppi = ppi, f = remove_missing){
+runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_missing){
   
   if(missing(e)){
     stop("Please provide the gene expression value with option e, e.g. e=\"expression.txt\"") }
@@ -70,9 +70,9 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, f = remove_missing){
     message("No PPI provided.") }
   else{ str3 <- paste("\'",ppi, "\'", sep = '') }
   
-  if(missing(f) || f == FALSE){
+  if(missing(rm_missing) || rm_missing == FALSE){
     str4 <- paste('False')
-    message("Miss the value of options f, using the default value FALSE, i.e. Not removing missing values ") }
+    message("Miss the value of options rm_missing, using the default value FALSE, i.e. Not removing missing values ") }
   else { str4 <- paste('True') }
   
   # source the pypanda from github raw website.

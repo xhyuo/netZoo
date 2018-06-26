@@ -31,8 +31,8 @@ ppi_file_path <- system.file("extdata", "ppi.txt", package = "PandaCondor", must
 
 
 # Run PANDA for treated and control network
-treated_all_panda_result <- runPanda(e = treated_expression_file_path, m = motif_file_path, ppi = ppi_file_path, f = TRUE )
-control_all_panda_result <- runPanda(e = control_expression_file_path, m = motif_file_path, ppi = ppi_file_path, f = TRUE )
+treated_all_panda_result <- runPanda(e = treated_expression_file_path, m = motif_file_path, ppi = ppi_file_path, rm_missing = TRUE )
+control_all_panda_result <- runPanda(e = control_expression_file_path, m = motif_file_path, ppi = ppi_file_path, rm_missing = TRUE )
 
 # access PANDA regulatory network
 treated_net <- treated_all_panda_result$panda
