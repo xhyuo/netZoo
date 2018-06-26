@@ -64,12 +64,15 @@ control_condor_object <- runCondor(control_net, threshold = 0)
 
 plot communities. package igraph and package viridisLite (a color map) are already loaded with this package.
 
-# treated network:
+*treated network*:
+```R
 treated_color_num <- max(treated_condor_object$red.memb$com)
 treated_color <- viridis(treated_color_num, alpha = 1, begin = 0, end = 1, direction = 1, option = "D")
 condor.plot.communities(treated_condor_object, color_list=treated_color, point.size=0.04, xlab="Target", ylab="Regulator")
+```
 
-# control network:
+*control network*:
+```R
 control_color_num <- max(control_condor_object$red.memb$com)
 control_color <- viridis(control_color_num, alpha = 1, begin = 0, end = 1, direction = 1, option = "D")
 condor.plot.communities(control_condor_object, color_list=control_color , point.size=0.04, xlab="Target", ylab="Regulator")
