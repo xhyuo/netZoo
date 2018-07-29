@@ -107,7 +107,7 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_
     panda_net[,1] <-paste('reg_', panda_net[,1], sep='')
     panda_net[,2] <-paste('tar_', panda_net[,2], sep='')
     colnames(indegree_net)<- paste("tar_",colnames(indegree_net), sep='')
-    colnames(outdegree_net)<- paste("tar_",colnames(outdegree_net), sep='')
+    colnames(outdegree_net)<- paste("reg_",colnames(outdegree_net), sep='')
     message("Rename the context of first two columns with prefix 'reg_' and 'tar_'" )
   }
   
