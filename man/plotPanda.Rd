@@ -4,12 +4,12 @@
 \alias{plotPanda}
 \title{Plot PANDA network}
 \usage{
-plotPanda(top = top_wgt_num, file = file_name)
+plotPanda(top = 100, file = "panda_top_100.png")
 }
 \arguments{
-\item{top}{Numeric vector indicating the amount of edges selected to plot by decreasting order of egde weights.}
+\item{top}{Numeric vector indicating the amount of edges selected to plot by decreasting order of egde weights. Defaults to 100.}
 
-\item{file}{Character string indicating the name of output .png file.}
+\item{file}{Character string indicating the name of output .png file. Defaults to 'panda_top_100.png'.}
 }
 \value{
 a message showing the path of output plot file.

@@ -2,8 +2,8 @@
 #'
 #'This function is able to plot specified amount of egdes in PANDA network, after generate PANDA network \code{\link{runPanda}}.
 #'
-#' @param top Numeric vector indicating the amount of edges selected to plot by decreasting order of egde weights. 
-#' @param file Character string indicating the name of output .png file.
+#' @param top Numeric vector indicating the amount of edges selected to plot by decreasting order of egde weights. Defaults to 100.
+#' @param file Character string indicating the name of output .png file. Defaults to 'panda_top_100.png'.
 #'
 #' @return a message showing the path of output plot file. 
 #'
@@ -24,7 +24,7 @@
 #' 
 #' @import reticulate
 #' @export
-plotPanda <- function(top = top_wgt_num, file = file_name){
+plotPanda <- function(top = 100, file = 'panda_top_100.png'){
   # source analyze_panda.py from GitHub
   reticulate::source_python("https://raw.githubusercontent.com/twangxxx/pypanda/master/pypanda/analyze_panda.py",convert = TRUE)
   # run py code to create an instance named "plot" of AnalyzePanda class.

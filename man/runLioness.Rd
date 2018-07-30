@@ -4,8 +4,7 @@
 \alias{runLioness}
 \title{Run python implementation of LIONESS}
 \usage{
-runLioness(e = expression, m = motif, ppi = ppi,
-  rm_missing = remove_missing)
+runLioness(e = expression, m = motif, ppi = ppi, rm_missing = TRUE)
 }
 \arguments{
 \item{e}{Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \emph{required}}

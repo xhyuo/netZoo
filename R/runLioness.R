@@ -25,7 +25,7 @@
 #' 
 #' @import reticulate
 #' @export
-runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = remove_missing){
+runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = TRUE){
   
   if(missing(e)){
     stop("Please provide the gene expression value with option e, e.g. e=\"expression.txt\"") }
@@ -41,7 +41,7 @@ runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = remove
     message("No PPI provided.") }
   else{ str3 <- paste("\'", ppi, "\'", sep = '') }
   
-  if(missing(rm_missing) || rm_missing == FALSE){
+  if(rm_missing == FALSE){
     str4 <- paste('False')
     message("Miss the value of options rm_missing, using the default value FALSE, i.e. Not removing missing values ") }
   else { str4 <- paste('True') }
@@ -60,5 +60,3 @@ runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = remove
   return(py$b)
 }
 
-
-# bb <- runLioness( e = "~/Desktop/ToyExpressionData.txt", m = "~/Desktop/ToyMotifData.txt", ppi = "~/Desktop/ToyPPIData.txt", rm_missing = TRUE)

@@ -4,14 +4,14 @@
 \alias{plotLioness}
 \title{Plot single-sample network}
 \usage{
-plotLioness(col = column, top = top_wgt_num, file = file_name)
+plotLioness(col = 0, top = 100, file = "lioness_top_100.png")
 }
 \arguments{
-\item{col}{Numerical Vector indicating the index (0-based)of specified sample in a population.}
+\item{col}{Numerical Vector indicating the index (0-based)of specified sample in a population. Defaults to 0.}
 
-\item{top}{Numeric Vector indicating the amount of edges selected to plot by decreasting order of egde weights.}
+\item{top}{Numeric Vector indicating the amount of edges selected to plot by decreasting order of egde weights. Defaults to 100.}
 
-\item{file}{Character String indicating the name of output .png file.}
+\item{file}{Character String indicating the name of output .png file. Defaults to 'lioness_top_100.png'.}
 }
 \value{
 A message showing the path of output plot.

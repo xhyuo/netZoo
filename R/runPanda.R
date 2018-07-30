@@ -54,7 +54,7 @@
 #'
 
 
-runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_missing){
+runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = FALSE){
   
   if(missing(e)){
     stop("Please provide the gene expression value with option e, e.g. e=\"expression.txt\"") }
@@ -70,7 +70,7 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_
     message("No PPI provided.") }
   else{ str3 <- paste("\'", ppi, "\'", sep = '') }
   
-  if(missing(rm_missing) || rm_missing == FALSE){
+  if(rm_missing == FALSE){
     str4 <- paste('False')
     message("Miss the value of options rm_missing, using the default value FALSE, i.e. Not removing missing values ") }
   else { str4 <- paste('True') }

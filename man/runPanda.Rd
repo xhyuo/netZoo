@@ -4,8 +4,7 @@
 \alias{runPanda}
 \title{Run pypanda in R}
 \usage{
-runPanda(e = expression, m = motif, ppi = ppi,
-  rm_missing = remove_missing)
+runPanda(e = expression, m = motif, ppi = ppi, rm_missing = FALSE)
 }
 \arguments{
 \item{e}{Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \emph{required}}
