@@ -1,4 +1,4 @@
-# PandaCondor
+# netZoo
 
 An R package to integrate [pypanda](https://github.com/davidvi/pypanda)--Python implementation of PANDA and R implementation of [CONDOR](https://github.com/jplatig/condor).
 
