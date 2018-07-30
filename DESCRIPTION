@@ -1,4 +1,4 @@
-Package: PandaCondor
+Package: netZoo
 Title: Integrate PANDA and CONDOR into one workflow
 Version: 0.0.0.9000
 Date: 2018-05-18
