@@ -9,7 +9,7 @@
 #'
 #' @param e Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \emph{required}
 #' @param m Character String indicatining the file path of pair file of motif edges,
-#'          when not provided analysis continues with Pearson correlation matrix. \emph{optional}
+#'          when not provided, analysis continues with Pearson correlation matrix. \emph{optional}
 #' @param ppi Character String indicatining the pair file path of Protein-Protein interaction dataset. \emph{optional}
 #' @param rm_missing Boolean indicatining whether to remove missing values. If TRUE, removes missing values.
 #'         if FALSE, keep missing values. THe default value is FALSE. \emph{optional}
@@ -58,17 +58,17 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_
   
   if(missing(e)){
     stop("Please provide the gene expression value with option e, e.g. e=\"expression.txt\"") }
-  else{ str1 <- paste("\'",e, "\'", sep = '') }
+  else{ str1 <- paste("\'", e, "\'", sep = '') }
   
   if(missing(m)){
     str2 <-  paste('None')
     message("Pair file of motif edges is not provided, analysis continues with Pearson correlation matrix.") }
-  else{ str2 <- paste("\'",m,"\'", sep = '') }
+  else{ str2 <- paste("\'", m,"\'", sep = '') }
   
   if(missing(ppi)){
     str3 <- paste('None')
     message("No PPI provided.") }
-  else{ str3 <- paste("\'",ppi, "\'", sep = '') }
+  else{ str3 <- paste("\'", ppi, "\'", sep = '') }
   
   if(missing(rm_missing) || rm_missing == FALSE){
     str4 <- paste('False')
@@ -79,7 +79,6 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_
   reticulate::source_python("https://raw.githubusercontent.com/twangxxx/pypanda/master/pypanda/panda.py",convert = TRUE)
   
   # invoke py code to create a pypanda object
-  #str <- paste("p=Panda(", "\'", e, "\'", ",", "\'", m, "\'", ",", "\'", ppi, "\'", ",", f, ")", sep = '')
   str <-  paste("p=Panda(", str1, ",", str2,",", str3, ",", str4, ")", sep ='')
   # call py
   py_run_string(str)
@@ -113,7 +112,6 @@ runPanda <- function( e = expression, m = motif, ppi = ppi, rm_missing = remove_
   
   # assign all three network into a list.
   output <- list("panda" = panda_net, "indegree" = indegree_net, "outdegree" = outdegree_net)
-  
-  print ("...Finish PANDA run...")
+  message ("...Finish PANDA run...")
   return(output)
 }

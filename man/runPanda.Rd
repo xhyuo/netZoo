@@ -11,7 +11,7 @@ runPanda(e = expression, m = motif, ppi = ppi,
 \item{e}{Character String indicatining the file path of expression values file, as each gene (row) by samples (columns) \emph{required}}
 
 \item{m}{Character String indicatining the file path of pair file of motif edges,
-when not provided analysis continues with Pearson correlation matrix. \emph{optional}}
+when not provided, analysis continues with Pearson correlation matrix. \emph{optional}}
 
 \item{ppi}{Character String indicatining the pair file path of Protein-Protein interaction dataset. \emph{optional}}
 
