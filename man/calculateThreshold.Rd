@@ -20,10 +20,10 @@ the midpoint between the median edge-weight of prior ( 3rd column "Motif" is 1.0
 }
 \examples{
 # refer to four input datasets files in inst/extdat
-treated_expression_file_path <- system.file("extdata", "expr4.txt", package = "PandaCondor", mustWork = TRUE)
-control_expression_file_path <- system.file("extdata", "expr10.txt", package = "PandaCondor", mustWork = TRUE)
-motif_file_path <- system.file("extdata", "chip.txt", package = "PandaCondor", mustWork = TRUE)
-ppi_file_path <- system.file("extdata", "ppi.txt", package = "PandaCondor", mustWork = TRUE)
+treated_expression_file_path <- system.file("extdata", "expr4.txt", package = "netZoo", mustWork = TRUE)
+control_expression_file_path <- system.file("extdata", "expr10.txt", package = "netZoo", mustWork = TRUE)
+motif_file_path <- system.file("extdata", "chip.txt", package = "netZoo", mustWork = TRUE)
+ppi_file_path <- system.file("extdata", "ppi.txt", package = "netZoo", mustWork = TRUE)
 
 
 # Run PANDA for treated and control network

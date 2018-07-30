@@ -19,9 +19,9 @@ This function is able to plot specified amount of egdes in PANDA network, after 
 }
 \examples{
 # refer to the input datasets files of control in inst/extdat as example
-control_expression_file_path <- system.file("extdata", "expr10.txt", package = "PandaCondor", mustWork = TRUE)
-motif_file_path <- system.file("extdata", "chip.txt", package = "PandaCondor", mustWork = TRUE)
-ppi_file_path <- system.file("extdata", "ppi.txt", package = "PandaCondor", mustWork = TRUE)
+control_expression_file_path <- system.file("extdata", "expr10.txt", package = "netZoo", mustWork = TRUE)
+motif_file_path <- system.file("extdata", "chip.txt", package = "netZoo", mustWork = TRUE)
+ppi_file_path <- system.file("extdata", "ppi.txt", package = "netZoo", mustWork = TRUE)
 
 # Run PANDA algorithm
 control_all_panda_result <- runPanda(e = control_expression_file_path, m = motif_file_path, ppi = ppi_file_path, rm_missing = TRUE )
