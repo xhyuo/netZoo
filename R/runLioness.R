@@ -25,7 +25,7 @@
 #' 
 #' @import reticulate
 #' @export
-runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = TRUE){
+runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = FALSE){
   
   if(missing(e)){
     stop("Please provide the gene expression value with option e, e.g. e=\"expression.txt\"") }
