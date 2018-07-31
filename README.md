@@ -4,12 +4,20 @@ An R package to integrate [pypanda](https://github.com/davidvi/pypanda)--Python 
 
 **PANDA**(Passing Attributes between Networks for Data Assimilation) is a message-passing model to gene regulatory network reconstruction. It integrates multiple sources of biological data, including protein-protein interaction, gene expression, and sequence motif information, in order to reconstruct genome-wide, condition-specific regulatory networks.[[Glass et al. 2013]](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0064832)
 
-**LIONESS**((Linear Interpolation to Obtain Network Estimates for Single Samples) is a method to estimate sample-specific regulatory networks by applying linear interpolation to the predictions made by existing aggregate network inference 		approaches.[[LIONESS arxiv paper]](https://arxiv.org/abs/1505.06440)
+**LIONESS**(Linear Interpolation to Obtain Network Estimates for Single Samples) is a method to estimate sample-specific regulatory networks by applying linear interpolation to the predictions made by existing aggregate network inference 		approaches.[[LIONESS arxiv paper]](https://arxiv.org/abs/1505.06440)
 
 **CONDOR** (COmplex Network Description Of Regulators) implements methods for clustering biapartite networks
 and estimatiing the contribution of each node to its community's modularity.[[Platig et al. 2016]](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005033)
 
 **ALPACA**(ALtered Partitions Across Community Architectures) is a method for comparing two genome-scale networks derived from different phenotypic states to identify condition-specific modules. [[Padi and Quackenbush 2018]](https://www.nature.com/articles/s41540-018-0052-5)
+
+
+## Table of Contents
+* [Getting Started](#Getting-Started) 
+  * [Prerequisites](#Prerequisites)
+    * [Required Python packages](#Required-Python-packages)
+  * [Installing](#Installing)
+* [Running the tests](#Running-the-tests)
 
 
 ## Getting Started
@@ -21,17 +29,14 @@ Python version and installation information is available [here](https://www.pyth
 
 R version and installation information is available [here](https://cran.r-project.org/).
 
-**required Python packages**
+**Required Python packages**
 
 There are some Python packages required to apply Python implementation of PANDA and LIONESS.
 
 How to install packages in different platforms could be find [here](https://packaging.python.org/tutorials/installing-packages/). 
 
 The required packages are:
-[pandas](https://pandas.pydata.org/)
-[numpy](http://www.numpy.org/)
-[networkx](https://networkx.github.io/)
-[matplotlib.pyplot](https://matplotlib.org/api/pyplot_api.html)
+[pandas](https://pandas.pydata.org/), [numpy](http://www.numpy.org/), [networkx](https://networkx.github.io/, [matplotlib.pyplot](https://matplotlib.org/api/pyplot_api.html).
 
 ### Installing
 This package could be downloaded via `install_github()` function from `devtools` package.
