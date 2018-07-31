@@ -18,8 +18,12 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
    * [Required Python packages](#required-python-packages)
   * [Installing](#installing)
 * [Running the sample datasets](#running-the-sample-datasets)
- * [PANDA and plot PANDA network](#panda-and-plot-panda-network)
- * [LIONESS and plot LIONESS network](#lioness-and-plot-lioness-network)
+  * [PANDA and plot PANDA network](#panda-and-plot-panda-network)
+  * [LIONESS and plot LIONESS network](#lioness-and-plot-lioness-network)
+  * [CONDOR](#condor)
+  * [ALPACA](#ALPACA)
+* [Further information](#further-information)
+  * [Note](#note)
  
 
 
@@ -159,7 +163,7 @@ alpaca_result<- runAlpaca(treated_panda_net, control_panda_net, "~/Desktop/TB", 
 
 ## Further information
 
-Use `vignette("condor")` to access the vignette page of `condor` package.
+Use `vignette("condor")` to access the vignette page of `condor` package and `vignette("ALPACA")` to access the vignette page of `ALPACA` package for any downstream analyses.
 
 ### Note
 If there is an error like `Error in fetch(key) : lazy-load database.rdb' is corrupt` when accessing the help pages of functions in this package after being loaded. It's [a limitation of base R](https://github.com/r-lib/devtools/issues/1660) and has not been solved yet. Restart R session and re-load this package will help.
