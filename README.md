@@ -15,9 +15,9 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 ## Table of Contents
 * [Getting Started](#getting-started) 
   * [Prerequisites](#prerequisites)
-    * [Required Python packages](#required-python-packages)
+   * [Required Python packages](#required-python-packages)
   * [Installing](#installing)
-* [Running the tests](#running-the-tests)
+* [Running the sample datasets](#running-the-sample-datasets)
 
 
 ## Getting Started
@@ -29,7 +29,7 @@ Python version and installation information is available [here](https://www.pyth
 
 R version and installation information is available [here](https://cran.r-project.org/).
 
-**Required Python packages**
+#### Required Python packages
 
 There are some Python packages required to apply Python implementation of PANDA and LIONESS.
 
@@ -44,22 +44,27 @@ This package could be downloaded via `install_github()` function from `devtools`
 ```R
 install.packages("devtools")
 library(devtools)
-devtools::install_github("twangxxx/PandaCondor")
+devtools::install_github("twangxxx/netZoo")
 
 ```
 
-## Running the tests
+## Running the sample datasets
 
-Package [CONDOR](https://github.com/jplatig/condor), [igprah](http://igraph.org/r/), and [viridisLite](https://cran.r-project.org/web/packages/viridisLite/index.html) are loaded while this package is loaded.
+Package [CONDOR](https://github.com/jplatig/condor), [igprah](http://igraph.org/r/), [viridisLite](https://cran.r-project.org/web/packages/viridisLite/index.html), and [ALPACA](https://github.com/meghapadi/ALPACA) are loaded with this package for further downstream analyses.
+
 Use search() to check all loaded package currently.
 ```R
-library(PandaCondor)
+library(netZoo)
 search()
 ```
-Access help pages of two primariy functions.
+Access help pages of six core functions.
 ```
 ?runPanda
+?plotPanda
+?runLioness
+?plotLioness
 ?runCondor
+?runAlpaca
 ```
 Use example datasets within package to test this package.
 
