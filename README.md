@@ -154,7 +154,7 @@ condor.plot.communities(control_condor_object, color_list=control_color , point.
 run LIONESS with two PANDA network above as first two arguments.
 
 ```R
-alpaca_result<- runAlpaca(treated_panda_net, control_panda_net, "~/Desktop/TB", verbose=T)
+alpaca_result<- runAlpaca(treated_net, control_net, "~/Desktop/TB", verbose=T)
 ```
 
 
