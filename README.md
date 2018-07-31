@@ -30,7 +30,7 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 ## Getting Started
 
 ### Prerequisites
-This pacakage requires Python 2.7 and R (>= 3.3.3) and Internet access.
+Use this pacakage requires Python 2.7 and R (>= 3.3.3) and Internet access.
 
 Python version and installation information is available [here](https://www.python.org/downloads/).
 
