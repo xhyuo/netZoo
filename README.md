@@ -40,7 +40,7 @@ There are also some Python packages required to apply Python implementation of P
 
 How to install packages in different platforms could be find [here](https://packaging.python.org/tutorials/installing-packages/). 
 
-The required packages are:
+The required Python packages are:
 [pandas](https://pandas.pydata.org/), [numpy](http://www.numpy.org/), [networkx](https://networkx.github.io/), [matplotlib.pyplot](https://matplotlib.org/api/pyplot_api.html).
 
 ### Installing
