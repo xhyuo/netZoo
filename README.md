@@ -76,10 +76,10 @@ Use example datasets within package to test this package.
 Refer to four input datasets files: one TB control expression dataset, one TB treated expression dataset, one motif sequence dataset, and one protein-protein interaction datasets in inst/extdat. All datasets are public data.
 
 ```R
-treated_expression_file_path <- system.file("extdata", "expr4.txt", package = "PandaCondor", mustWork = TRUE)
-control_expression_file_path <- system.file("extdata", "expr10.txt", package = "PandaCondor", mustWork = TRUE)
-motif_file_path <- system.file("extdata", "chip.txt", package = "PandaCondor", mustWork = TRUE)
-ppi_file_path <- system.file("extdata", "ppi.txt", package = "PandaCondor", mustWork = TRUE)
+treated_expression_file_path <- system.file("extdata", "expr4.txt", package = "netZoo", mustWork = TRUE)
+control_expression_file_path <- system.file("extdata", "expr10.txt", package = "netZoo", mustWork = TRUE)
+motif_file_path <- system.file("extdata", "chip.txt", package = "netZoo", mustWork = TRUE)
+ppi_file_path <- system.file("extdata", "ppi.txt", package = "netZoo", mustWork = TRUE)
 ```
 
 ### PANDA and plot PANDA network
