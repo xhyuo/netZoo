@@ -13,11 +13,11 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 
 
 ## Table of Contents
-* [Getting Started](#Getting-Started) 
-  * [Prerequisites](#Prerequisites)
-    * [Required Python packages](#Required-Python-packages)
-  * [Installing](#Installing)
-* [Running the tests](#Running-the-tests)
+* [Getting Started](#getting-started) 
+  * [Prerequisites](#prerequisites)
+    * [Required Python packages](#required-python-packages)
+  * [Installing](#installing)
+* [Running the tests](#running-the-tests)
 
 
 ## Getting Started
