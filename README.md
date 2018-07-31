@@ -129,7 +129,6 @@ plotLioness(col = 0, top = 100, file = "control_lioness_sample1_100.png")
 run CONDOR with a threshold to select edges. 
 Defaults to `threshold` is the average of [median weight of non-prior edges] and [median weight of prior edges], all weights mentioned previous are transformationed with formula `w'=ln(e^w+1)` before calculating the median and average. But all the edges selected will remain the orginal weights calculated by PANDA before applying CONDOR.
 
-
 ```R
 treated_condor_object <- runCondor(treated_net, threshold = 0)
 control_condor_object <- runCondor(control_net, threshold = 0)

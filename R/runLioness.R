@@ -52,11 +52,18 @@ runLioness <- function(e = expression, m = motif, ppi = ppi, rm_missing = FALSE)
   # run py code to create an instance named "p" of Panda Class 
   str <-  paste("p=Panda(", str1, ",", str2,",", str3, ",", str4, ")", sep ='')
   py_run_string(str)
+  # assign a with the output PANDA network
+  py_run_string(paste("a=p.export_panda_results"))
+  panda_net <- py$a
+  
   # create an instance named "l" of Lioness Class.
   py_run_string(paste("l = Lioness(p)"))
   # call method "export_lioness_result" of instance "l" to assign varible "b" with the PANDA output in pd.DataFrame.
   py_run_string(paste("b = l.export_lioness_results"))
   # convert the python varible "b" to a data.frame in R enviroment.
-  return(py$b)
+  lioness_net <- py$b
+  # cbind the first two columns of PANDA output with LIONESS output.
+  lioness_output <- cbind(panda_net[,c(1,2)], lioness_net)
+  return(lioness_output)
 }
 

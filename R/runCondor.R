@@ -57,7 +57,7 @@ runCondor <- function(df, threshold = m){
     
     threshold <- calculateThreshold(df)
     message("Using the midway of [median weight of non-prior edges] and [median weight of prior edges], 
-            all weights mentioned above are transformationed with formula w'=ln(e^w+1)")
+            all weights mentioned above are transformationed with formula w'=ln(e^w+1) first")
     
     # transform the edge weight with formula w'=ln(e^w+1) to generate a new column of original data frame
     newdf <- cbind(df,log(exp(df[,4])+1))

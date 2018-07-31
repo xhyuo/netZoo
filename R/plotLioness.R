@@ -35,5 +35,3 @@ plotLioness <- function(col = 0, top = 100, file = 'lioness_top_100.png'){
   # print out a message to indicate the path of output .png file.
   message(paste("The plot of top ", top, " edges in sample ", col+1, " is located in ", getwd(), "/", file, sep = ""))
 }
-
-# plotLioness(col = 1, top = 100, file = "plot.png")
