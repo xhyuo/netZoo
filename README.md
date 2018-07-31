@@ -16,12 +16,17 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 
 ### Prerequisites
 This pacakage requires Python 2.7 and R (>= 3.3.3) and Internet access.
+
 Python version and installation information is available [here](https://www.python.org/downloads/).
+
 R version and installation information is available [here](https://cran.r-project.org/).
 
 **required Python packages**
+
 There are some Python packages required to apply Python implementation of PANDA and LIONESS.
+
 How to install packages in different platforms could be find [here](https://packaging.python.org/tutorials/installing-packages/). 
+
 The required packages are:
 [pandas](https://pandas.pydata.org/)
 [numpy](http://www.numpy.org/)
