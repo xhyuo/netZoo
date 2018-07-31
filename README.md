@@ -22,6 +22,7 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
   * [CONDOR](#condor)
   * [ALPACA](#ALPACA)
 * [Further information](#further-information)
+  * [Future Work](#future-work)
   * [Note](#note)
  
 
@@ -160,6 +161,7 @@ alpaca_result<- runAlpaca(treated_net, control_net, "~/Desktop/TB", verbose=T)
 
 ## Further information
 
+### Future Work
 Use `vignette("condor")` to access the vignette page of `condor` package and `vignette("ALPACA")` to access the vignette page of `ALPACA` package for any downstream analyses.
 
 ### Note
