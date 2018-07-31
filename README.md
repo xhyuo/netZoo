@@ -15,7 +15,6 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 ## Table of Contents
 * [Getting Started](#getting-started) 
   * [Prerequisites](#prerequisites)
-   * [Required Python packages](#required-python-packages)
   * [Installing](#installing)
 * [Running the sample datasets](#running-the-sample-datasets)
   * [PANDA and plot PANDA network](#panda-and-plot-panda-network)
@@ -36,9 +35,7 @@ Python version and installation information is available [here](https://www.pyth
 
 R version and installation information is available [here](https://cran.r-project.org/).
 
-#### Required Python packages
-
-There are some Python packages required to apply Python implementation of PANDA and LIONESS.
+There are also some Python packages required to apply Python implementation of PANDA and LIONESS.
 
 How to install packages in different platforms could be find [here](https://packaging.python.org/tutorials/installing-packages/). 
 
