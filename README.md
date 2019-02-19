@@ -1,6 +1,6 @@
 # netZoo
 
-An R package to integrate [pypanda](https://github.com/davidvi/pypanda)--Python implementation of PANDA and LIONESS, R implementation of [CONDOR](https://github.com/jplatig/condor), and R implementation of [ALPACA](https://github.com/meghapadi/ALPACA)
+An R package to integrate [pypanda](https://github.com/davidvi/pypanda)--Python implementation of PANDA and LIONESS, R implementation of [CONDOR](https://github.com/jplatig/condor), R implementation of [ALPACA](https://github.com/meghapadi/ALPACA), and realated downsteaming analysis.
 
 **PANDA**(Passing Attributes between Networks for Data Assimilation) is a message-passing model to gene regulatory network reconstruction. It integrates multiple sources of biological data, including protein-protein interaction, gene expression, and sequence motif information, in order to reconstruct genome-wide, condition-specific regulatory networks.[[Glass et al. 2013]](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0064832)
 
@@ -12,15 +12,22 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 **ALPACA**(ALtered Partitions Across Community Architectures) is a method for comparing two genome-scale networks derived from different phenotypic states to identify condition-specific modules. [[Padi and Quackenbush 2018]](https://www.nature.com/articles/s41540-018-0052-5)
 
 
+
 ## Table of Contents
 * [Getting Started](#getting-started) 
   * [Prerequisites](#prerequisites)
   * [Installing](#installing)
+* [Data Resources](#Data-Resources)
+  * [PANDA-ready Motif mapping data](#PANDA-ready-Motif-mapping-data)
+  * [PPI](#PPI)
 * [Running the sample datasets](#running-the-sample-datasets)
   * [PANDA and plot PANDA network](#panda-and-plot-panda-network)
+  * [Cytoscape Plotting](#Cytoscape-Plotting)
   * [LIONESS and plot LIONESS network](#lioness-and-plot-lioness-network)
   * [CONDOR](#condor)
   * [ALPACA](#ALPACA)
+* [Downstream Analysis](#Downstream-Analysis)
+  * [Pre-ranked GSEA](#Pre-ranked-GSEA)
 * [Further information](#further-information)
   * [Future Work](#future-work)
   * [Note](#note)
@@ -30,12 +37,7 @@ and estimatiing the contribution of each node to its community's modularity.[[Pl
 ## Getting Started
 
 ### Prerequisites
-Use this pacakage requires Python 2.7 and R (>= 3.3.3) and Internet access.
-
-Python version and installation information is available [here](https://www.python.org/downloads/).
-
-R version and installation information is available [here](https://cran.r-project.org/).
-
+Using this pacakage requires [**Python**](https://www.python.org/downloads/) 2.7, [**R**](https://cran.r-project.org/) (>= 3.3.3), [**Cytoscape**](https://cytoscape.org/) (>=3.6.1), [**GSEA**](http://software.broadinstitute.org/gsea/index.jsp), and **Internet access**.
 There are also some Python packages required to apply Python implementation of PANDA and LIONESS.
 
 How to install packages in different platforms could be find [here](https://packaging.python.org/tutorials/installing-packages/). 
@@ -50,6 +52,18 @@ This package could be downloaded via `install_github()` function from `devtools`
 install.packages("devtools")
 library(devtools)
 devtools::install_github("twangxxx/netZoo")
+
+```
+## Data Resources
+
+### PANDA-ready Motif mappings data
+Here is some [PANDA-ready Motif mappings data](https://sites.google.com/a/channing.harvard.edu/kimberlyglass/tools/resources) by different species.
+### PPI
+This package is included a function `sourcePPI` will create a Protein-Protein Interactions(PPI) througt STRING database among the proteins of interest. The [STRINGdb](http://www.bioconductor.org/packages/release/bioc/html/STRINGdb.html) is already loaded with loading netZOO for further use.
+
+```R
+# TF is a data frame with single column filled with TFs of Mycobacterium tuberculosis H37Rv.
+PPI <- sourcePPI(TF,species.index=83332, score_streshold=0)
 
 ```
 
@@ -106,6 +120,13 @@ control_net <- control_all_panda_result$panda
 plotPanda(top =100, file="control_panda_100.png")
 ```
 
+### Cytoscape Plotting
+Cytoscape is an interactivity network visualization tool highly recommanded to explore the PANDA/LIONESS network. Before using this function `runCytoscapePlot`, please install and launch Cytoscape (3.6.1 or greater) and keep it running whenever using.
+
+```R
+runCytoscapePlot(control_net, top = 200, network.name="TB_control")
+```
+
 ### LIONESS and plot LIONESS network
 The method how to run LIONESS is mostly idential with method how to run PANDA in this package, unless the return values of `runLioness` is a data frame where first two columns represent TFs (regulators) and Genes (targets) while the rest columns represent each sample. each cell filled with estimated score calculated by LIONESS.
 
@@ -157,6 +178,10 @@ run LIONESS with two PANDA network above as first two arguments.
 alpaca_result<- runAlpaca(treated_net, control_net, "~/Desktop/TB", verbose=T)
 ```
 
+
+
+## Downstream Analysis
+### Pre-ranked GSEA
 
 ## Further information
 
